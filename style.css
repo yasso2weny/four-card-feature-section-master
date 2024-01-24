@@ -1,0 +1,189 @@
+/*  (-CSS reset- Credit: Josh Comeau ) */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*  CSS Reset End */
+
+:root {
+    --card-border-red: hsl(0, 78%, 62%);
+    --card-border-cyan: hsl(180, 62%, 55%);
+    --card-border-orange: hsl(34, 97%, 64%);
+    --card-border-blue: hsl(212, 86%, 64%);
+
+    --primary: hsl(234, 12%, 34%);
+    --secondary: hsl(229, 6%, 66%);
+    --bg-color: hsl(0, 0%, 98%);
+
+    --ff-base: 'Poppins', sans-serif;
+
+    --fw-light: 200;
+    --fw-regular: 400;
+    --fw-bold: 600;
+}
+
+body {
+    font-family: var(--ff-base);
+    font-size: 0.9375rem;
+    background-color: var(--bg-color);
+}
+
+/* Header Style */
+
+header {
+    margin: 3.125rem 0.625rem;
+}
+
+#header-title {
+    font-weight: var(--fw-light);
+    color: var(--primary);
+    font-size: 1.5625rem;
+}
+
+span {
+    font-weight: var(--fw-bold);
+    color: var(--primary);
+}
+
+#header-paragraph{
+    font-weight: var(--fw-regular);
+    color: var(--secondary);
+    margin-top: 1.25rem;
+}
+
+/* Header Repeated Style */
+
+#header-title, #header-paragraph {
+    text-align: center;
+}
+
+/* Main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5625rem;
+    margin-bottom: 1.875rem; 
+}
+
+/* Card Style */
+
+.card {
+    border-radius: 0.3125rem;
+    border-top: 0.3125rem solid;
+    padding: 1.25rem;
+    background-color: white;
+    margin: 0 1.25rem;
+    box-shadow: 0 0 0.9375rem hsl(0, 5%, 76%);
+}
+
+#center-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5625rem;
+}
+
+.border-cyan {
+    border-color: var(--card-border-cyan);
+}
+
+.border-red {
+    border-color: var(--card-border-red);
+}
+
+.border-orange {
+    border-color: var(--card-border-orange);
+}
+
+.border-blue {
+    border-color: var(--card-border-blue);
+}
+
+/* Card Repeated Style */
+
+.card-title {
+    font-weight: var(--fw-bold);
+    color: var(--primary);
+}
+
+.card-description {
+    font-weight: var(--fw-light);
+    color: var(--secondary);
+    line-height: 1.5;
+}
+
+.icon {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2.1875rem;
+}
+
+@media (min-width: 1440px) {
+    header {
+        margin: 3.125rem 33.125rem;
+    }
+
+    main {
+        flex-direction: row;
+        align-items: center;
+        margin-inline: auto;
+        max-width: 68.75rem;
+    }
+
+    main > * {
+        flex: 1;
+    }
+
+    .card {
+        margin: 0;
+        margin-bottom: 1.875rem;
+    }
+
+    #center-cards{
+        display: flex;
+        flex-direction: column;
+    } 
+}
